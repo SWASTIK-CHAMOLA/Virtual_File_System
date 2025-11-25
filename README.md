@@ -77,7 +77,13 @@ Allows mounting different filesystem types (simulation only):
 - Python **3.x**
 - Uses only Python’s built-in libraries
 
-### Running the Application
-
-1. Save your program code as:
+| Component               | Description                                                              |
+| ----------------------- | ------------------------------------------------------------------------ |
+| `FileSystemType (Enum)` | Defines filesystem types such as EXT4, NTFS, BTRFS.                      |
+| `ItemType (Enum)`       | Defines item type: FILE or DIRECTORY.                                    |
+| `FSItem (dataclass)`    | Represents a file/directory with inode, metadata, children, and content. |
+| `Operation (dataclass)` | Stores details of system call logs.                                      |
+| `Statistics`            | Tracks operations count, files, directories, and caching metrics.        |
+| `VirtualFileSystem`     | Core backend handling all filesystem logic, caching, and operations.     |
+| `VFSGuiApp`             | Tkinter-based GUI binding events and visuals to the VFS backend.         |
 
